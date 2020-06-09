@@ -1,0 +1,16 @@
+http://man7.org/linux/man-pages/man2/access.2.html
+http://man7.org/linux/man-pages/man2/unlink.2.html
+http://man7.org/linux/man-pages/man2/dup.2.html
+http://man7.org/linux/man-pages/man2/open.2.html
+http://codewiki.wikidot.com/c:system-calls:dup2
+http://www.kitebird.com/csh-tcsh-book/csh-intro.pdf   - An Introduction to the C shell
+https://brennan.io/2015/01/16/write-a-shell-in-c/   - Tutorial - Write a Shell in C
+http://stackoverflow.com/questions/8082932/connecting-n-commands-with-pipes-in-a-shell
+
+http://stackoverflow.com/questions/8319484/regarding-background-processes-using-fork-and-child-processes-in-my-dummy-shel   - bg
+http://www.computerhope.com/unix/uwhich.htm - where command
+http://stackoverflow.com/questions/19820581/api-for-whereis-command-in-linux  - where command
+
+http://stackoverflow.com/questions/8082932/connecting-n-commands-with-pipes-in-a-shell  - pipe
+
+Discussed with Vivek

@@ -1,0 +1,26 @@
+--- fend.c	2016-10-07 21:08:59.000000001 -0400
++++ fend_new.c	2016-10-07 21:08:59.000000001 -0400
+@@ -52,7 +52,7 @@
+               			break;
+           		orig_rax = ptrace(PTRACE_PEEKUSER, child, 8 * ORIG_RAX, NULL);
+ 
+-          		if((int)orig_rax == SYS_open || (int)orig_rax == SYS_openat)
++          		if((int)orig_rax == SYS_open || (int)orig_rax == SYS_openat || (int)orig_rax == SYS_creat)
+ 			{
+                  		ptrace(PTRACE_GETREGS, child,NULL, &regs);
+ 				unsigned int flag = regs.rsi;
+@@ -122,12 +122,12 @@
+ 				}
+ 				}
+ 			}
+-			else if(orig_rax == SYS_unlinkat)
++			else if(orig_rax == SYS_unlink)
+ 			{
+                  		ptrace(PTRACE_GETREGS, child,NULL, &regs);
+ 				if(regs.rsi)
+ 				{
+-				char *filename = get_filename(child,regs.rsi);
++				char *filename = get_filename(child,regs.rdi);
+ 				char *permission = get_permission(argv[2], filename); //argv[2] is the config file
+ 				if(permission != NULL)
+ 				{
